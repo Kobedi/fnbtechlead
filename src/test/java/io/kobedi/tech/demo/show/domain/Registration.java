@@ -1,5 +1,20 @@
 package io.kobedi.tech.demo.show.domain;
 
+/*
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import javax.persistence.*;
+
+import java.util.Date;
+*/
+
+
 public class Registration {
 	
 	private long id;
@@ -65,8 +80,12 @@ public class Registration {
 	public void setUpdatedBy(String updatedBy) {
 		this.updatedBy = updatedBy;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "Registration [id=" + id + ", seatNumber=" + seatNumber + ", name=" + name + ", surname=" + surname
+				+ ", email=" + email + ", cellPhone=" + cellPhone + ", dateCreated=" + dateCreated + ", dateUpDated="
+				+ dateUpDated + ", updatedBy=" + updatedBy + "]";
+	}	
 	
 	
 
