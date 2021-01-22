@@ -14,7 +14,6 @@ import javax.persistence.*;
 import java.util.Date;
 */
 
-
 public class Registration {
 	
 	private long id;
