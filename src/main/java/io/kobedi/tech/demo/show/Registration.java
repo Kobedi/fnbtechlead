@@ -13,6 +13,10 @@ import javax.persistence.*;
 
 import java.util.Date;
 
+
+
+
+
 @Entity
 @Table(name = "members")
 @EntityListeners(AuditingEntityListener.class)

@@ -4,6 +4,8 @@ package io.kobedi.tech.demo.show;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+
+
 @ConfigurationProperties(prefix = "covid19")
 @Component
 public class Covid19Properties {
