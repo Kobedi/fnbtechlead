@@ -1,2 +1,2 @@
 # fnbtechlead
-Get basic lockdown rule
+Get basic lockdown rules
