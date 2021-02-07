@@ -10,6 +10,10 @@ import org.springframework.data.repository.query.Param;
 public interface RegistrationRepository extends JpaRepository<Registration, Long>
 {
 	
+	@Query("SELECT max(r.id) FROM Registration r") 
+	Integer getRegistrationMaxCount();
 	
+	@Query("SELECT r FROM Registration r where r.cellPhone = :cellphone") 
+	Registration getRecordByCellPhoneNum(@Param("cellphone") String cellphone);
 
 }

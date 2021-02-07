@@ -14,9 +14,6 @@ import javax.persistence.*;
 import java.util.Date;
 
 
-
-
-
 @Entity
 @Table(name = "members")
 @EntityListeners(AuditingEntityListener.class)
@@ -32,7 +29,7 @@ public class Registration {
 	@Column(name = "name", nullable = false)
 	private String name;
 	
-	@Column(name = "surname", nullable = true)
+	@Column(name = "surname", nullable = false)
 	private String surname;
 	
 	@Column(name = "email", nullable = true)
