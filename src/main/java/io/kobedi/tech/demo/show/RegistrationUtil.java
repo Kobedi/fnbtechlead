@@ -28,6 +28,12 @@ public class RegistrationUtil {
 		return regRecord;
 	}
 	
+	public static Registration createAddResponse(Registration regRecord)
+	{
+		regRecord.setSeatNumber(regRecord.getId());
+		return regRecord;
+	}
+	
 	public static Registration createUpdateResponse(Registration regRecord)
 	{
 		return regRecord;

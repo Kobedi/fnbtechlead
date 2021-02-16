@@ -46,7 +46,7 @@ public class TechLeadController {
 		
 		Integer seatAllocation = registrationRepository.getRegistrationMaxCount();
 		if(seatAllocation == null ) seatAllocation = 0;
-		return ResponseEntity.ok().body(seatAllocation);
+		return ResponseEntity.ok().body(covid19Properties.getGatheringLimit().intValue() - seatAllocation);
 	}
 
 	@PostMapping("/register")
@@ -66,7 +66,7 @@ public class TechLeadController {
 			if((seatAllocation < allocatedSeatLimit) || (seatAllocation == 49))
 			{
 				Registration newRecord = registrationRepository.save(register);
-				return ResponseEntity.ok().body(newRecord);
+				return ResponseEntity.ok().body(RegistrationUtil.createAddResponse(newRecord));
 			}
 			else
 			{
